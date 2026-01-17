@@ -60,14 +60,23 @@ input, button {
   right: 10px;
   background: lightpink;
   color: deeppink;
-  padding: 10px;
+  padding: 12px;
   font-weight: bold;
-  animation: bounce 1.2s ease-in-out infinite; 
+  text-align: center;
+
+  /* FORCE animation */
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
+
+/* THIS MUST BE OUTSIDE .love */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
 
 /* Confetti */
 .confetti {
